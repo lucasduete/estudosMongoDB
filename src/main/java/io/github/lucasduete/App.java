@@ -33,10 +33,13 @@ public class App {
                     break;
                 case 2:
                     buscarPub();
+                    break;
                 case 0:
                     System.exit(0);
+                    break;
                 default:
                     System.out.println("OPCAO INVALIDA");
+                    break;
             }
 
             System.out.println("Deseja Continuar?");

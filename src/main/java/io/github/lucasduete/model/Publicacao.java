@@ -3,6 +3,7 @@ package io.github.lucasduete.model;
 import org.bson.types.ObjectId;
 
 import java.text.SimpleDateFormat;
+import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -15,11 +16,14 @@ public class Publicacao {
     private String titulo;
     private String autor;
     private String conteudo;
-    private LocalDateTime data;
+    private Date data;
+
+    {
+        data = new Date();
+    }
 
     public Publicacao() {
 
-        data = LocalDateTime.now();
     }
 
     public Publicacao(ObjectId id, String titulo, String autor, String conteudo) {
@@ -27,7 +31,7 @@ public class Publicacao {
         this.titulo = titulo;
         this.autor = autor;
         this.conteudo = conteudo;
-        data = LocalDateTime.now();
+
     }
 
     public ObjectId getId() {
@@ -62,11 +66,11 @@ public class Publicacao {
         this.conteudo = conteudo;
     }
 
-    public LocalDateTime getData() {
+    public Date getData() {
         return data;
     }
 
-    public void setData(LocalDateTime data) {
+    public void setData(Date data) {
         this.data = data;
     }
 
