@@ -94,12 +94,12 @@ public class Publicacao {
 
     @Override
     public String toString() {
-        return "Publicacao{" +
+        return "Publicacao{ " +
                 "id=" + id +
                 ", titulo='" + titulo + '\'' +
                 ", autor='" + autor + '\'' +
                 ", conteudo='" + conteudo + '\'' +
-                ", data=" + data +
+                ", data=" + new SimpleDateFormat("yyyy-MM-dd").format(data) +
                 '}';
     }
 }
